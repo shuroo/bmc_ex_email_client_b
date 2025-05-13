@@ -4,7 +4,10 @@ import java.util.regex.Pattern;
 import model.*;
 /**
  * Basic client email validation class.
- */
+ * @author shiri rave
+ * @date 13/05/25
+ * */
+
 public class EmailValidator {
 
 
@@ -17,6 +20,8 @@ public class EmailValidator {
     }
 
 
+
+
     /**
      * Basic email validation for the sent email addresses
      *
@@ -26,5 +31,14 @@ public class EmailValidator {
      */
     public static Boolean validateEmailAddresses(String emailFrom, String emailTo) {
         return validateEmailAddress(emailFrom) && validateEmailAddress(emailTo);
+    }
+
+    public static Boolean validateEmail(String from,String to,String subject,String body){
+
+        if (from == null || to == null || subject == null || body == null) {
+            return false;
+        }
+
+        return validateEmailAddresses(from,to);
     }
 }

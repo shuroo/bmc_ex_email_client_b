@@ -26,7 +26,7 @@ public class Configuration {
     }
     /**
      * Aid method to build server url
-     * @return String
+     * @return String - the server endpoint
      */
     public String getServerUrl(){
         StringBuilder builder = new StringBuilder();
